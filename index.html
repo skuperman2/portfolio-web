@@ -20,27 +20,27 @@
 
         <nav>
             <ul class="nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#sobre-mi">Sobre Mi</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
             </ul>
         </nav>
-        <a href="#" class="btn"><button>Contact Me</button></a>
+        <a href="#form" class="btn"><button>Contacto</button></a>
 
         <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
 
-        <div class="overlay" id="mobile-menu">
+        <div class="overlay-nav" id="mobile-menu">
             <a onclick="closeNav()" href="" class="close">&times;</a>
             <div class="overlay-content">
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact Me</a>
+                <a href="#sobre-mi">Sobre Mi</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#form">Contacto</a>
             </div>
         </div>
     </header>
     <!-- END NAV -->
 
     <!-- HERO -->
-    <div class="contenedor">
+    <section class="contenedor">
         <div class="wrap">
             <div class="box">
                 <h1>SEBASTIAN KUPERMAN</h1>
@@ -52,23 +52,21 @@
                     efectiva de proyectos relacionados con la información.
                 </p>
                 <div class="botones">
-                    <a href="#" class="btn1">About</a>
-                    <a href="#" class="btn2">Contact</a>
+                    <a href="#sobre-mi" class="btn1">About</a>
+                    <a href="#form" class="btn2">Contacto</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- END HERO -->
 
-    <!-- ABOUT ME -->
-    
-    <div class="about" id="about-me">
+    <!-- SOBRE MI -->
+    <section class="sobre-mi" id="sobre-mi">
         <div class="">
             <img src="img\Seb - Sketch 2.png" alt="sebastian-kuperman" loading="lazy" class="" />
         </div>
 
-        <div class="">
-            <h1 class="">ABOUT ME</h1>
+        <div class="">SOBRE MI</h1>
             <div class="">
                 <p class="">
                     Con más de 15 años de experiencia en el campo de la tecnología de la información (IT), mi
@@ -98,51 +96,54 @@
                 </p>
             </div>
         </div>
-    </div>
+    </section>
     <!-- END ABOUT ME -->
 
-    <!-- PROJECTS -->
-    <h1>PROJECTS</h1>
-    <div class="project">
-        <div class="card">
-            <img src="img/logo.png" alt="project one" class="image">
-            <div class="overlay-project">
-                <span class="text">Project One</span>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="panel">
+        <h1>PROYECTOS</h1>
+        <div class="contenido">
+            <div class="item img1">
+                <img src="img/logo.png" alt="project one" class="image">
+                <div class="overlay"></div>
+                <h2 class="titulo">POWER BI</h2>
+            </div>
+            <div class="item img2">
+                <img src="img/logo.png" alt="project one" class="image">
+                <div class="overlay"></div>
+                <h2 class="titulo">SQL</h2>
+            </div>
+            <div class="item img3">
+                <img src="img/logo.png" alt="project one" class="image">
+                <div class="overlay"></div>
+                <h2 class="titulo">WEB</h2>
+            </div>
+            <div class="item img4">
+                <img src="img/logo.png" alt="project one" class="image">
+                <div class="overlay"></div>
+                <h2 class="titulo">OTROS</h2>
             </div>
         </div>
-        <div class="card">
-            <img src="img/logo.png" alt="project one" class="image">
-            <div class="overlay-project">
-                <span class="text">Project Two</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/logo.png" alt="project one" class="image">
-            <div class="overlay-project">
-                <span class="text">Project Three</span>
-            </div>
-        </div>
-    </div>
-      
-    <!-- END PROJECTS -->
+    </section>
+    <!-- END PROYECTOS -->
 
     <!-- FORM -->
-    <div class="container">
+    <section class="form" id="form">
         <form action="action_page.php">
 
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre acá..">
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido acá..">
 
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" name="comentario" placeholder="Tu comentario acá.." style="height:200px"></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Enviar">
 
         </form>
-    </div>
+    </section>
     <!-- END FORM -->
 
     <!-- FOOTER -->
@@ -155,7 +156,7 @@
     <!-- END FOOTER -->
 
     <!-- SCRIPT -->
-    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
     <!-- END SCRIPT -->
 
 </body>
