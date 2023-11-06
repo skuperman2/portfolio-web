@@ -279,8 +279,8 @@ body{
 
 /* ******************************* */
 
-/*SOBRE MI */
-.sobre-mi{
+/*ABOUT ME */
+.about-me{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -288,22 +288,22 @@ body{
     padding: 5px 10%;
 }
 
-.sobre-mi-titulo h1{
+.about-me-title h1{
     font-size: 32px;
 	line-height: .9;
 	padding-bottom: 10px;
 }
 
-.sobre-mi-texto p{
+.about-me-text p{
     font-size: 15px;
 	line-height: 1.2;
 }
 
-.sobre-mi-img{
+.about-me-img{
     
 }
 
-/* END SOBRE MI */
+/* END ABOUT ME */
 
 /* ******************************* */
 
