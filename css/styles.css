@@ -101,6 +101,10 @@ p {
     margin-top: 20px;
     font-size: 18px;
     line-height: 1.5;
+    justify-content: center;
+	max-width: 50%;
+	height: 80vh;
+    padding: 20px;
 }
 
 .resume-link {
@@ -213,7 +217,7 @@ input[type=submit]:hover {
     border-radius: 4px;
     color: peru;
     background-color: #e2f1f8;
-    color: #ffbc0e;
+    color: peru;
     transform: scale(1.1);
 }
   
