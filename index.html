@@ -13,76 +13,21 @@
 
 <body>
     <!-- NAV -->
-    <header class="header">
-        <div class="logo">
-            <img src="img/logo-bg-black.png" alt="logo">
-        </div>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="pages/about-me.html">About Me</a></li>
-                <li><a href="pages/projects.html">Projects</a></li>
-            </ul>
-        </nav>
-        <a href="pages/contact.html" class="btn"><button>Contact</button></a>
-
-        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
-
-        <div class="overlay-nav" id="mobile-menu">
-            <a onclick="closeNav()" href="" class="close">&times;</a>
-            <div class="overlay-content">
-                <a href="pages/about-me.html">About Me</a>
-                <a href="pages/projects.html">Projects</a>
-                <a href="pages/contact.html">Contact</a>
+    <div class="home">
+        <div class="words">
+            <div class="words">
+                <p id="about" onmouseover="changeWord('I\'m')" onmouseout="resetWord('About Me')" onclick="goToPage('pages/about-me.html')">About Me</p>
+                <p id="projects" onmouseover="changeWord('Beautiful')" onmouseout="resetWord('Projects')" onclick="goToPage('pages/projects.html')">Projects</p>
+                <p id="contact" onmouseover="changeWord('Apurate')" onmouseout="resetWord('Contact')" onclick="goToPage('pages/contact.html')">Contact</p>
             </div>
         </div>
-    </header>
-    <!-- END NAV -->
-
-    <!-- HERO -->
-
-    <div class="main">
-        <h1>Sebastián Kuperman 
-        <div class="roller">
-            <span id="rolltext">
-                DATA ANALYTICS<br/>
-                DATA ENGINEERING<br/>
-                DATA VISUALIZATION<br/>
-                <span id="spare-time">querés conocerme?</span><br/>
+        <div class="image-container">
+            <img src="img/logo-bg-black.png" alt="Imagen">
         </div>
-        </h1>
     </div>
-    <!-- <section class="contenedor">
-        <div class="wrap">
-            <div class="box">
-                <h1>SEBASTIAN KUPERMAN</h1>
-                <p>
-                    ¡Saludos! Soy Sebastián Kuperman, un profesional apasionado por el mundo de los datos, Power BI y la
-                    gestión de proyectos orientada a la información. Aquí encontrarás una exposición de mis proyectos y
-                    logros en el análisis de datos, la implementación de soluciones con SQL y mi experiencia en la
-                    gestión
-                    efectiva de proyectos relacionados con la información.
-                </p>
-                <div class="botones">
-                    <a href="pages/about-me.html" class="btn1">About</a>
-                    <a href="#form" class="btn2">Contact</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- END HERO -->
 
-    <!-- ABOUT ME -->
-    
-    <!-- END ABOUT ME -->
-
-    <!-- PROYECTOS -->
-    
-    <!-- END PROYECTOS -->
-
-    <!-- FORM -->
-    
-    <!-- END FORM -->
+    <!-- END NAV -->
 
     <!-- FOOTER -->
     <footer class="footer">

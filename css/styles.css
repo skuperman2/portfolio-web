@@ -11,405 +11,104 @@
 }
 
 body{
-    background-color: #FFF;
-}
-
-.header{
     background-color: #000;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 85px;
-    padding: 5px 10%;
-}
-
-.header .logo{
-    cursor: pointer;
-    margin-right: auto;
-}
-
-.header .logo img{
-    height: 70px;
-    width: auto;
-    transition: all 0.3s;
-}
-
-.header .logo img:hover{
-    transform: scale(1.2);
-}
-
-.header .nav-links{
-    list-style: none;
-}
-
-.header .nav-links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.header .nav-links li:hover{
-    transform: scale(1.1);
-}
-
-.header .nav-links a{
-    font-size: 700;
     color: #FFF;
-}
-
-.header .nav-links a:hover{
-    color: peru;
-}
-
-.header .btn button{
-    margin-left: 20px;
-    font-weight: 700;
-    color: #000;
-    padding: 9px 25px;
-    background: #FFF;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.header .btn button:hover{
-    background-color: peru;
-    color: #FFF;
-    transform: scale(1.1);
 }
 /* END RESET CSS */
 
-/* NUEVO HERO */
-* {
-    margin:0;
-    padding:0;
-    font-family: 'Playpen Sans', cursive;
-  }
-  
-  body{
-    background-color: #000;
-  }
-  
-  .main{
-    height:100vh;
-    width:100%;  
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-  }
-  h1{
-    text-align:center;
-    text-transform: uppercase;
-    color: #FFF; 
-    font-size: 4rem;
-  }
-  
-  .roller{
-    height: 4.125rem;
-    line-height: 4rem;
-    position: relative;
-    overflow: hidden; 
-    width: 100%;
+/* HOME */
+.home {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    color: #FFF;
-  }
-  
-  
-  #spare-time{
-    font-size: 1rem;
-    font-style: italic;
-    letter-spacing: 1rem;
-    margin-top: 0;
-    color: #FFF;
-    
-  }
-  
-  .roller #rolltext {
-    position: absolute;
-    top: 0;
-    animation: slide 5s infinite;  
-  }
-  
-  @keyframes slide {
-    0%{
-      top:0;
-    }
-    25%{
-      top: -4rem;    
-    }
-    50%{
-      top: -8rem;
-    }
-    72.5%{
-      top: -12.25rem;
-    }
-  }
-  
-  @media screen and (max-width: 600px){
-    h1{
-    text-align:center;
-    text-transform: uppercase;
-    color: #F1FAEE; 
-    font-size: 2.125rem;
-  }
-    
-    .roller{
-    height: 2.6rem; 
-    line-height: 2.125rem;  
-    }
-    
-    #spare-time {
-      font-size: 1rem;
-      letter-spacing: 0.1rem;
-    }
-    
-    .roller #rolltext {  
-    animation: slide-mob 5s infinite;  
-  }
-    
-    @keyframes slide-mob {
-    0%{
-      top:0;
-    }
-    25%{
-      top: -2.125rem;    
-    }
-    50%{
-      top: -4.25rem;
-    }
-    72.5%{
-      top: -6.375rem;
-    }
-  }
-}
-/* END NUEVO HERO */
-
-/* NAV */
-.header a{
-    text-decoration: none;
-}
-
-.header .overlay-nav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    overflow: hidden;
-    transition: all 0.3s ease 0;
-}
-
-.header .overlay-nav .overlay-content{
-    display: flex;
-    height: 100%;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    height: 100vh;
+    padding: 20px;
 }
 
-.header .overlay-nav a{
-    padding: 15px;
-    font-size: 36px;
-    display: block;
-    transition: all 0.3s ease 0;
-    font-weight: 700;
-    color: #FFF;
+.words {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.header .nav-links a:hover{
-    color: #ffbc0e;
-}
-
-/**/.menu {
-    display:none;
-}
-
-.header .btn button,
-/**/.header .menu button{
-    margin-left: 20px;
-    font-weight: 700;
-    color: #1b3039;
-    padding: 9px 25px;
-    background: #eceff1;
-    border: none;
-    border-radius: 50px;
+.words p {
+    margin: 10px 0;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.header .btn button:hover,
-/**/.header .menu button:hover{
-    background-color: #e2f1f8;
-    color: #ffbc0e;
+.words p:hover {
+    color: chocolate;
     transform: scale(1.1);
 }
 
+.image-container {
+    max-width: 100%;
+    height: auto;
+}
 
-/**/@media screen and (max-width: 800px){
-    .nav-links, .btn {
-        display: none;
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .home {
+        flex-direction: row;
     }
-    .menu {
-        display: inherit;
-    }
-}
-/* END NAV */
 
-/*NAV MOBILE*/
-.header a{
-    text-decoration: none; 
-}
-
-.header .overlay-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: rgba(33, 49, 63, .95);
-    overflow: hidden;
-    transition: all 0.3s ease 0s;
-}
-
-.header .overlay-nav .overlay-content{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    
-}
-
-.header .overlay-nav a{
-    padding: 15px;
-    font-size: 36px;
-    display: block;
-    transition: all 0.3s ease 0s;
-    font-weight: 700;
-    color: #eceff1;
-}
-
-.header .overlay-nav a:hover, 
-.header .overlay-nav a:focus{
-    color: #ffbc0e;
-}
-
-.header .overlay-nav .close{
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 65px;
-}
-
-@media screen and (max-height:450px) {
-    .header .overlay-nav a{
-        font-size: 20px;
-    }
-    .header .overlay-nav .close{
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
+    .words {
+        text-align: left;
     }
 }
-/* END NAV MOBILE */
 
-/* HERO */
-.contenedor{
-	display: flex;
-	max-width: 100%;
-	height: 80vh;
-	background-image: url(../img/hero-dark.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: left; 
-}
-.contenedor .wrap{
-	max-width: 1000px;
-	margin: 0 auto;
-	height: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: left;
-}
-.contenedor .wrap .box{
-	flex-basis: 50%;
-	color: #fff;
-	text-align: left;
-	align-self: center;
-}
-.contenedor .wrap .box p{
-	font-size: 18px;
-	letter-spacing: 2px;
-	font-weight: 300;
-	
-}
-.contenedor .wrap .box h1{
-	font-size: 32px;
-	line-height: .9;
-	padding-bottom: 10px;
-	
-}
-.contenedor .wrap .box p{
-	font-size: 15px;
-	line-height: 1.2;
-}
-.contenedor .wrap .box .botones{
-	display: flex;
-	margin-top: 30px;
-	flex-flow: row wrap;
-}
-.contenedor .wrap .box .botones .btn1{
-	flex-basis: 30%;
-	border: solid 2px;
-	border-radius: 20px;
-	padding: 10px 30px 10px 30px;
-	margin-right: 20px;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-}
-.contenedor .wrap .box .botones .btn2{
-	flex-basis: 30%;
-	background-color: #fff;	
-	border: solid 2px;
-	border-radius: 20px;
-	padding: 10px 30px 10px 30px;
-	text-align: center;
-	text-decoration: none;
-	color: #000;
-}
-/* END HERO */
+/* END HOME */
 
 /* ******************************* */
 
 /*ABOUT ME */
-.about-me{
+
+.about-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    /* height: 85px; */
-    padding: 5px 10%;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
 }
 
-.about-me-title h1{
-    font-size: 32px;
-	line-height: .9;
-	padding-bottom: 10px;
+h1 {
+    font-size: 24px;
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
-.about-me-text p{
-    font-size: 15px;
-	line-height: 1.2;
+.image-container {
+    margin-top: 20px; /* Agregado espacio entre el título y la imagen */
 }
 
-.about-me-img{
-    
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-container {
+    max-width: 80%;
+    margin: 20px auto; /* Ajustado el margen para centrar */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.resume-link {
+    display: block;
+    margin-top: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* END ABOUT ME */

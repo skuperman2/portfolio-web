@@ -1,16 +1,3 @@
-// NAV
-
-function openNav(){
-    document.getElementById("mobile-menu").style.width = "100%";
-}
-
-function closeNav(){
-    document.getElementById("mobile-menu").style.width = "0%";
-}
-
-// END NAV
-
-
 // PROJECT
 
 const panels = document.querySelectorAll('.panel')
@@ -29,3 +16,20 @@ function removeActiveClasses() {
 }
 
 // END PROJECT
+
+
+// HOME
+
+function changeWord(wordNumber) {
+    const wordElement = document.getElementById(`word${wordNumber}`);
+    wordElement.innerHTML = `Nueva Palabra ${wordNumber}`;
+}
+
+function resetWord(wordNumber) {
+    const wordElement = document.getElementById(`word${wordNumber}`);
+    wordElement.innerHTML = `Palabra ${wordNumber}`;
+}
+
+function goToPage(page) {
+    window.location.href = page;
+}
