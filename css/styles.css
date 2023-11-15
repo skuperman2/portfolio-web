@@ -17,13 +17,12 @@ body{
 /* END RESET CSS */
 
 /* HOME */
+
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
+    position: absolute;
+	height: 100%;
+	display: flex;  
+	align-items:   center;
 }
 
 .words {
@@ -44,12 +43,12 @@ body{
 }
 
 .image-container {
-    max-width: 100%;
+    ancho-maximo: 100%;
     height: auto;
 }
 
 .image-container img {
-    max-width: 100%;
+    ancho-maximo: 100%;
     height: auto;
 }
 
@@ -88,12 +87,12 @@ h1 {
 }
 
 .image-container img {
-    max-width: 100%;
+    ancho-maximo: 100%;
     height: auto;
 }
 
 .text-container {
-    max-width: 80%;
+    ancho-maximo: 80%;
     margin: 20px auto; /* Ajustado el margen para centrar */
 }
 
@@ -102,7 +101,7 @@ p {
     font-size: 18px;
     line-height: 1.5;
     justify-content: center;
-	max-width: 50%;
+	ancho-maximo: 50%;
 	height: 80vh;
     padding: 20px;
 }
@@ -131,7 +130,7 @@ p {
 }
 
 #proyectos .contenido {
-    max-width: 90%;
+    ancho-maximo: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -225,7 +224,7 @@ input[type=submit]:hover {
     display: flex;
     justify-content: center;
     margin: auto;
-	max-width: 50%;
+	ancho-maximo: 50%;
 	height: 80vh;
     border: 2px solid #000;
     border-radius: 5px;
