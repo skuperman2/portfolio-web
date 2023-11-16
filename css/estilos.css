@@ -79,10 +79,10 @@ html, body {
 .texto-color-turquesa {
 	color: #5dc1b9;
 }
-.text-color-black {
+.texto-color-negro {
 	color: #000000;
 }
-.text-color-gray {
+.texto-color-gris {
 	color: #888888;
 }
 
@@ -200,7 +200,7 @@ b {
 }
 
 i {
-	font-style:italic;
+	font-style: italic;
 }
 
 
@@ -273,6 +273,7 @@ img {
     max-height: 100%;
 	pointer-events: none !important;
 }
+
 video {
 	display: block;
 	max-width: 100%;
@@ -410,7 +411,7 @@ video {
 }
 
 @keyframes animacion {
-	0% {opacity: 0;transform: translateY(30vh);} /* WORK ON THISSS! */
+	0% {opacity: 0;transform: translateY(30vh);}
 /* 	0% {transform: translateY(100%);} */
 	100% {opacity: 1;transform: translateY(0%);}	
 }
@@ -445,6 +446,7 @@ video {
 		}
 	}
 
+
 @keyframes bg-photo {
 	0% {opacity: 0;transform: scale(1.1);}
 	100% {opacity: 1;transform: scale(1);}	
@@ -467,6 +469,8 @@ video {
 	}
 }
 
+
+
 @media screen and (max-width: 767px) {
 	.hide-web {
 		display: none;
@@ -479,6 +483,7 @@ video {
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		
 	}
 	.tap-indication {
 	    text-align: center;
@@ -487,8 +492,8 @@ video {
 		color: #ffffff;
 		position: fixed;
 		bottom: 4%;
-		font-size: 0.6em; /* general fallback */
-	    font-size: 3.6vm; /* IE9 fallback */
+		font-size: 0.6em; /*general fallback*/
+	    font-size: 3.6vm; /*IE9 fallback*/
 	    font-size: 3.6vmin;
 		animation: bounce 1s infinite alternate;
 		
@@ -520,20 +525,20 @@ video {
 
 
 /* ------ Copiar email en portapeles ------ */
-.label-email {
+.etiqueta-email {
 	cursor: pointer;
 }
-.label-email:after{
+.etiqueta-email:after{
     content:"skuperman@outlook.com";
 }
-.label-email:hover:after{
+.etiqueta-email:hover:after{
 	content:"Copiar en portapales";
 }
-.label-email:hover:active:after {
+.etiqueta-email:hover:active:after {
     content:"Email copiado";
 }
 		@media screen and (max-width: 767px) {
-			.label-email:hover:after{
+			.etiqueta-email:hover:after{
 				content:"Copiar en portapales";
 			}
 		}

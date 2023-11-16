@@ -1,128 +1,3 @@
-/* eslint-env browser */
-
-;(function () {
-    try {
-      const onMessage = ({ data }) => {
-        if (!data.wappalyzer || !data.wappalyzer.technologies) {
-          return
-        }
-  
-        const { technologies } = data.wappalyzer
-  
-        const toScalar = (value) =>
-          typeof value === 'string' || typeof value === 'number' ? value : !!value
-  
-        removeEventListener('message', onMessage)
-  
-        postMessage({
-          wappalyzer: {
-            dom: technologies.reduce((technologies, { name, dom }) => {
-              try {
-                Object.keys(dom).forEach((selector) => {
-                  let nodes = []
-  
-                  try {
-                    nodes = document.querySelectorAll(selector)
-                  } catch (error) {
-                    // Continue
-                  }
-  
-                  if (!nodes.length) {
-                    return
-                  }
-  
-                  nodes.forEach((node) => {
-                    dom[selector].forEach(({ properties }) => {
-                      if (properties) {
-                        Object.keys(properties).forEach((property) => {
-                          if (
-                            Object.prototype.hasOwnProperty.call(node, property)
-                          ) {
-                            const value = node[property]
-  
-                            if (typeof value !== 'undefined') {
-                              technologies.push({
-                                name,
-                                selector,
-                                property,
-                                value: toScalar(value),
-                              })
-                            }
-                          }
-                        })
-                      }
-                    })
-                  })
-                })
-              } catch (error) {
-                // Fail quietly
-              }
-  
-              return technologies
-            }, []),
-          },
-        })
-      }
-  
-      addEventListener('message', onMessage)
-    } catch (e) {
-      // Fail quietly
-    }
-  })()
-  
-
-  /* eslint-env browser */
-
-;(function () {
-    try {
-      const onMessage = ({ data }) => {
-        if (!data.wappalyzer || !data.wappalyzer.technologies) {
-          return
-        }
-  
-        const { technologies } = data.wappalyzer
-  
-        postMessage({
-          wappalyzer: {
-            js: technologies.reduce((technologies, { name, chains }) => {
-              chains.forEach((chain, index) => {
-                const value = chain
-                  .split('.')
-                  .reduce(
-                    (value, method) =>
-                      value &&
-                      value instanceof Object &&
-                      Object.prototype.hasOwnProperty.call(value, method)
-                        ? value[method]
-                        : '__UNDEFINED__',
-                    window
-                  )
-  
-                if (value !== '__UNDEFINED__') {
-                  technologies.push({
-                    name,
-                    chain,
-                    value:
-                      typeof value === 'string' || typeof value === 'number'
-                        ? value
-                        : !!value,
-                  })
-                }
-              })
-  
-              return technologies
-            }, []),
-          },
-        })
-      }
-  
-      addEventListener('message', onMessage, { once: true })
-    } catch (e) {
-      // Fail quietly
-    }
-  })()
-
-
 /*!
  * clipboard.js v2.0.4
  * https://zenorocha.github.io/clipboard.js
@@ -661,3 +536,28 @@
     }
     ])
 });
+
+
+function emailCopiado(id_elemento) {
+
+    // Crea un campo de texto "oculto", este por un textarea
+    var aux = document.createElement("textarea");
+  
+    // Asigna el contenido del elemento especificado al valor del campo
+    // este para vaciar el contenido
+  
+    aux.innerHTML = document.getElementById(id_elemento).innerHTML
+  
+    // Añade el campo a la página
+    document.body.appendChild(aux);
+  
+    // Selecciona el contenido del campo
+    aux.select();
+  
+    // Copia el texto seleccionado
+    document.execCommand("copy");
+    // Elimina el campo de la página
+    document.body.removeChild(aux);
+  
+  }
+  
