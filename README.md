@@ -1,6 +1,6 @@
 # portfolio-sebastian-kuperman
 
-Este es el repositorio de mi portafolio web personal, donde muestro mis proyectos y experiencias. Puedes visitar mi portafolio en https://www.sebastiankuperman.com
+Este es el repositorio de mi portafolio web personal, donde muestro mis proyectos y experiencias. Puedes visitar mi portafolio en https://skuperman2.github.io/portfolio-web/
 
 ## Descripción
 
@@ -44,7 +44,7 @@ Este proyecto está bajo la Licencia GNU GENERAL PUBLIC LICENSE. Consulta el arc
 ## Contacto
 
 - Correo Electrónico: skuperman@outlook.com
-- Sitio Web: https://www.sebastiankuperman.com
+- Sitio Web: https://skuperman2.github.io/portfolio-web/
 - LinkedIn: https://www.linkedin.com/in/skuperman/
 
 ---
