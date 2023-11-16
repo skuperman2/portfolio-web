@@ -1,27 +1,27 @@
 @font-face {
 	font-family: 'Regular';
-	src: url('../fonts/Graphik-Regular.eot');
-	src: url('../fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Graphik-Regular.woff') format('woff'),
-		url('../fonts/Graphik-Regular.ttf') format('truetype');
+	src: 	url('../fonts/Graphik-Regular.eot');
+	src: 	url('../fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Graphik-Regular.woff') format('woff'),
+			url('../fonts/Graphik-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Semibold';
-	src: url('../fonts/Graphik-Semibold.eot');
-	src: url('../fonts/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Graphik-Semibold.woff') format('woff'),
-		url('../fonts/Graphik-Semibold.ttf') format('truetype');
+	src: 	url('../fonts/Graphik-Semibold.eot');
+	src: 	url('../fonts/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Graphik-Semibold.woff') format('woff'),
+			url('../fonts/Graphik-Semibold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Medium';
-	src: url('../fonts/Graphik-Medium.eot');
-	src: url('../fonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Graphik-Medium.woff') format('woff'),
-		url('../fonts/Graphik-Medium.ttf') format('truetype');
+	src: 	url('../fonts/Graphik-Medium.eot');
+	src: 	url('../fonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Graphik-Medium.woff') format('woff'),
+			url('../fonts/Graphik-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
@@ -48,9 +48,7 @@ time, mark, audio, video {
 }
 
 html, body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
+    /* font-smoothing: antialiased; */
     text-rendering: optimizeLegibility;
     padding:0;
     margin:0;
@@ -65,16 +63,12 @@ html, body {
   color: rgba(255,255,255,.99);
   background: rgba(0,0,0,.99);
 }
-::-moz-selection {
-  color: rgba(255,255,255,.99);
-  background: rgba(0,0,0,.99);
-}
 
 /* ------ Fondos ------ */
 .web-fondo-negro {
 	background: #000000;
 }
-.website-background-white {
+.web-fondo-banco {
 	background: #ffffff;
 }
 
@@ -339,17 +333,10 @@ video {
 			}
 		}
 .etiqueta-logo{
-	-webkit-animation:fadelogo .6s cubic-bezier(0.2, 0.6, 0.2, 1);
-	-moz-animation:fadelogo .6s cubic-bezier(0.2, 0.6, 0.2, 1);
 	animation:fadelogo .6s cubic-bezier(0.2, 0.6, 0.2, 1);
-	-webkit-animation-fill-mode:backwards;
-	-moz-animation-fill-mode:backwards;
 	animation-fill-mode:backwards;	
 }
-@-webkit-keyframes fadelogo {
-	0% {-webkit-transform: translateY(10vh);}
-	100% {-webkit-transform: translateY(0vh);}	
-}
+
 @keyframes fadelogo {
 	0% {opacity: 0;transform: translateY(10vh);}
 	100% {opacity: 1;transform: translateY(0vh);}	
@@ -370,13 +357,8 @@ video {
 	height:4px; /* control the height of the progress bar */
 	width:100%;
 	background-color: #66FFFF;
-	-webkit-transform-origin:0 50%;
 	transform-origin:0 50%;
-	-webkit-transition:-webkit-transform 50ms;
-	transition:-webkit-transform 50ms;
 	transition:transform 50ms;
-	transition:transform 50ms,-webkit-transform 50ms;
-	-webkit-transform:scaleX(0);
 	transform:scaleX(0);
 	will-change:transform;
 	position:relative;
@@ -393,14 +375,12 @@ video {
 .vertical-center {
 	position: absolute;
 	height: 100%;
-	display: -webkit-flex; /* Safari */
 	display: flex;  
-	-webkit-align-items: center; /* Safari */
 	align-items:   center;
 }
 
 .etiqueta-hola:after{
-    content:"Hola.";
+    content:"Hola,";
 }
 .etiqueta-hola:hover:after{
 	content:"Conoceme";
@@ -425,18 +405,8 @@ video {
 }
 
 .animacion {
-	-webkit-animation:animacion .6s cubic-bezier(0.2, 0.6, 0.2, 1);
-	-moz-animation:animacion .6s cubic-bezier(0.2, 0.6, 0.2, 1);
 	animation:animacion .6s cubic-bezier(0.2, 0.6, 0.2, 1);
-	-webkit-animation-fill-mode:backwards;
-	-moz-animation-fill-mode:backwards;
 	animation-fill-mode:backwards;
-}
-
-
-@-webkit-keyframes animacion {
-	0% {opacity: 0;-webkit-transform: translateY(100%);}
-	100% {opacity: 1;-webkit-transform: translateY(0%);}	
 }
 
 @keyframes animacion {
@@ -446,12 +416,12 @@ video {
 }
 
 /* ------ Delays ------ */
-.delay02 { -webkit-animation-delay: .2s; animation-delay: .2s;}
-.delay04 { -webkit-animation-delay: .4s; animation-delay: .4s;}
-.delay06 { -webkit-animation-delay: .6s; animation-delay: .6s;}
-.delay08 { -webkit-animation-delay: .8s; animation-delay: .8s;}
-.delay10 { -webkit-animation-delay: 1s; animation-delay: 1s;}
-.delay12 { -webkit-animation-delay: 1.2s; animation-delay: 1.2s;}
+.delay02 {animation-delay: .2s;}
+.delay04 {animation-delay: .4s;}
+.delay06 {animation-delay: .6s;}
+.delay08 {animation-delay: .8s;}
+.delay10 {animation-delay: 1s;}
+.delay12 {animation-delay: 1.2s;}
 
 /* ------ Fondo de la foto ------ */
 .bg-photo {	
@@ -461,31 +431,19 @@ video {
 	right: 0; 
 	bottom: 0; 
 	left: 35%;
-	background-image: url(../img/hero.png);
-	background-repeat: no-repeat; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
+	background-image: url(../img/fondo.png);
+	background-repeat: no-repeat;
 	-o-background-size: cover;
-	 background-size: cover;
+	background-size: cover;
 	
-	-webkit-animation:bg-photo 1.2s cubic-bezier(.5, .6, .6, 1);
-	-moz-animation:bg-photo 1.2s cubic-bezier(.5, .6, .6, 1);
-	animation:bg-photo 1.2s cubic-bezier(.5, .6, .6, 1);	
-	-webkit-animation-fill-mode:backwards;
-	-moz-animation-fill-mode:backwards;
+	animation:bg-photo 1.2s cubic-bezier(.5, .6, .6, 1);
 	animation-fill-mode:backwards;
 }
 	@media screen and (max-width: 767px) {
 		.bg-photo {
-		-webkit-animation:bg-photo .6s cubic-bezier(.5, .6, .6, 1);
-		-moz-animation:bg-photo .6s cubic-bezier(.5, .6, .6, 1);
 		animation:bg-photo .6s cubic-bezier(.5, .6, .6, 1);		
 		}
 	}
-@-webkit-keyframes bg-photo {
-	0% {opacity: 0;transform: scale(1.1);}
-	100% {opacity: 1;transform: scale(1);}	
-}
 
 @keyframes bg-photo {
 	0% {opacity: 0;transform: scale(1.1);}
@@ -534,19 +492,9 @@ video {
 	    font-size: 3.6vmin;
 		animation: bounce 1s infinite alternate;
 		
-		-webkit-animation:bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
-		-moz-animation:bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
 		animation:bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;	
 	}
 	@keyframes bounce {
-	  from {
-	    transform: translateY(0px);
-	  }
-	  to {
-	    transform: translateY(-8px);
-	  }
-	}
-	@-webkit-keyframes bounce {
 	  from {
 	    transform: translateY(0px);
 	  }
